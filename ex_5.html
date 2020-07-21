@@ -4,6 +4,24 @@
     </head>
     <body>
         <script>
+            function exibir(usuarios){
+                for(var usuarios of usuarios){
+                    console.log("O " + usuarios.nome + " possui as habiblidades:" + " " + usuarios.habiblidade.join(', '));
+                } 
+            }
+
+            var usuarios = [
+                {
+                    nome:"Diego",
+                    habiblidade: ["Javascript", "ReactJS", "Redux"]
+                },
+                {
+                    nome:"Gabriel",
+                    habiblidade: ["VueJS", "Ruby on Rails", "Elixir"]
+                }
+            ];
+
+            exibir(usuarios);
 
         </script>
     </body>
