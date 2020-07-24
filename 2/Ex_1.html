@@ -1,0 +1,29 @@
+
+<html>
+    <head>
+        <title>Desafio 2 curso de javascript</title>
+    </head>
+    <body>
+        <div>
+            <button class="botao">Clique aqui!</button>
+        </div>
+    </body>
+
+    <script>
+        var inputElement = document.querySelector('button.botao');
+        
+        inputElement.onclick = function() {
+            var divElement = document.createElement('div');
+
+            divElement.setAttribute('class' ,'square');
+        
+            var containerElement = document.querySelector('body');
+            containerElement.appendChild(divElement);
+
+            var squareElement = document.querySelector('.square');
+            squareElement.style.width = '100px';
+            squareElement.style.height = '100px';
+            squareElement.style.backgroundColor = 'red';
+        }
+    </script>
+</html>
