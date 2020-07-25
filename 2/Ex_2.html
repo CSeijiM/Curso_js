@@ -1,0 +1,45 @@
+
+<html>
+    <head>
+        <title>Desafio 2 curso de javascript</title>
+    </head>
+    <body>
+        <div>
+            <button class="botao">Clique aqui!</button>
+        </div>
+        <div id="quadrados">
+
+        </div>
+
+    <script>
+
+        function getRandomColor() {
+            var letters = "0123456789ABCDEF";
+            var color = "#";
+            for (var i = 0; i < 6; i++) {
+                color += letters[Math.floor(Math.random() * 16)];
+            }
+            return color;
+        }
+
+        var btnElement = document.querySelector('button.botao');
+        
+        btnElement.onclick = function() {
+            var divElement = document.createElement('div');
+            var containerElement = document.querySelector('div#quadrados');
+
+            divElement.setAttribute('class' ,'square');
+            containerElement.appendChild(divElement);
+            
+            divElement.style.width = '100px';
+            divElement.style.height = '100px';
+            divElement.style.backgroundColor ="red";
+
+            divElement.onmouseover = function() {
+                divElement.style.backgroundColor = getRandomColor();
+            }
+        }
+    </script>
+    </body>
+</html>
+
